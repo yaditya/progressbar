@@ -1,0 +1,36 @@
+.fl {
+	float: left;
+}
+
+#graph {
+
+}
+
+	.graph-item {
+		float: left;
+		height: 200px;
+		margin-right: 20px;
+		width: 80px;
+		position: relative;
+		overflow: hidden;
+	}
+
+		.graph-item span {
+			color: pink;
+			display: block;
+			font-size: 24px;
+			position: absolute;
+			bottom: 10px;
+			left: 20px;
+			z-index: 99;
+		}
+
+	.graph-content {
+		background-color: blue;
+		position: absolute;
+		bottom: 0;
+		-webkit-transition: height 1s;
+		-moz-transition: height;
+		transition: height 1s;
+		width: 100%;
+	}

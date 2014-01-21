@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div id="graph">
+			<div class="graph-container fl">
+				<div id="graph1" class="graph-item">
+					<span></span>
+					<div data-percent="0" class="graph-content"></div>
+				</div>
+				<div id="graph2" class="graph-item">
+					<span></span>
+					<div data-percent="0" class="graph-content"></div>
+				</div>
+				<div id="graph3" class="graph-item">
+					<span></span>
+					<div data-percent="0" class="graph-content"></div>
+				</div>
+			</div>
+
+
+
+			<div class="graph-controller fl">
+				<div>
+					<select name="" id="">
+						<option name="graph1" value="1">Graph 1</option>
+						<option name="graph2" value="2">Graph 2</option>
+						<option name="graph3" value="3">Graph 3</option>
+
+					</select>
+				</div>
+				<button id="add" type="button" value="+25%">+ 25%</button>
+				<button id="subtract" type="button" value="-25%">- 25%</button>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="graph.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('.graph-item').blockGraph();
+				$('.graph-controller').blockGraphController();
+			})
+
+		</script>
+	</body>
+</html>
