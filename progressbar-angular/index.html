@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Progress Bar</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div id="graph" ng-app="progressBar" ng-controller="ProgressBarController">
+            <div class="graph-container fl">
+                <div id="{{bar.id}}" ng-repeat="bar in bars" class="graph-item">
+                    <span>{{bar.percent}}%</span>
+                    <div class="graph-content {{bar.className}}" ng-style="{ height: bar.percent + '%' }"></div>
+                </div>
+            </div>
+
+
+
+            <div class="graph-controller fl">
+                <!-- bar selection -->
+                <div>
+                    <select ng-model="selectedBar" ng-options="bar.id as bar.label for bar in bars">
+                    </select>
+                </div>
+                <button id="add" type="button" value="+10" ng-click="calculate($event)">+ 10%</button>
+                <button id="add" type="button" value="+25" ng-click="calculate($event)">+ 25%</button>
+                <button id="subtract" type="button" value="-25" ng-click="calculate($event)">- 25%</button>
+                <button id="subtract" type="button" value="-10" ng-click="calculate($event)">- 10%</button>
+            </div>
+        </div>
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+        <script src="js/controller.js"></script>
+
+    </body>
+</html>
